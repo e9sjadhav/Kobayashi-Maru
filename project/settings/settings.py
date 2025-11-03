@@ -31,7 +31,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     'pythonjobs.in',
-    'www.pythonjobs.in'
+    'www.pythonjobs.in',
+    '127.0.0.1'
 ]
 
 
@@ -49,6 +50,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'qux',
     'qux.seo',
+    #my apps
+    'tournament',
 ]
 
 MIDDLEWARE = [
