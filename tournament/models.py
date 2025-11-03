@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Team(models.Model):
     country = models.CharField(max_length=3, unique=True)
-    matches = models.IntegerField()
+    matches = models.IntegerField(default=0)
     won = models.BooleanField(default=False)
     lost = models.BooleanField(default=False)
 
