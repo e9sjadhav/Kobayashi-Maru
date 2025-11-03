@@ -1,0 +1,1429 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add site",
+      "content_type": 7,
+      "codename": "add_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change site",
+      "content_type": 7,
+      "codename": "change_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete site",
+      "content_type": 7,
+      "codename": "delete_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view site",
+      "content_type": 7,
+      "codename": "view_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Site Data",
+      "content_type": 8,
+      "codename": "add_seosite"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Site Data",
+      "content_type": 8,
+      "codename": "change_seosite"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Site Data",
+      "content_type": 8,
+      "codename": "delete_seosite"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Site Data",
+      "content_type": 8,
+      "codename": "view_seosite"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Page Data",
+      "content_type": 9,
+      "codename": "add_seopage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Page Data",
+      "content_type": 9,
+      "codename": "change_seopage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Page Data",
+      "content_type": 9,
+      "codename": "delete_seopage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Page Data",
+      "content_type": 9,
+      "codename": "view_seopage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add team match",
+      "content_type": 10,
+      "codename": "add_teammatch"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change team match",
+      "content_type": 10,
+      "codename": "change_teammatch"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete team match",
+      "content_type": 10,
+      "codename": "delete_teammatch"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view team match",
+      "content_type": 10,
+      "codename": "view_teammatch"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add team",
+      "content_type": 11,
+      "codename": "add_team"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change team",
+      "content_type": 11,
+      "codename": "change_team"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete team",
+      "content_type": 11,
+      "codename": "delete_team"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view team",
+      "content_type": 11,
+      "codename": "view_team"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add match",
+      "content_type": 12,
+      "codename": "add_match"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change match",
+      "content_type": 12,
+      "codename": "change_match"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete match",
+      "content_type": 12,
+      "codename": "delete_match"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view match",
+      "content_type": 12,
+      "codename": "view_match"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "auth", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "sites", "model": "site" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "qux_seo", "model": "seosite" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "qux_seo", "model": "seopage" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": { "app_label": "tournament", "model": "teammatch" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "tournament", "model": "team" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "tournament", "model": "match" }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": { "domain": "example.com", "name": "example.com" }
+  },
+  { "model": "tournament.team", "pk": 1, "fields": { "country": "c00" } },
+  { "model": "tournament.team", "pk": 2, "fields": { "country": "c01" } },
+  { "model": "tournament.team", "pk": 3, "fields": { "country": "c02" } },
+  { "model": "tournament.team", "pk": 4, "fields": { "country": "c03" } },
+  { "model": "tournament.team", "pk": 5, "fields": { "country": "c04" } },
+  { "model": "tournament.team", "pk": 6, "fields": { "country": "c05" } },
+  { "model": "tournament.team", "pk": 7, "fields": { "country": "c06" } },
+  { "model": "tournament.team", "pk": 8, "fields": { "country": "c07" } },
+  { "model": "tournament.team", "pk": 9, "fields": { "country": "c08" } },
+  { "model": "tournament.team", "pk": 10, "fields": { "country": "c09" } },
+  { "model": "tournament.match", "pk": 1, "fields": { "date": "2025-10-01" } },
+  { "model": "tournament.match", "pk": 2, "fields": { "date": "2025-10-02" } },
+  { "model": "tournament.match", "pk": 3, "fields": { "date": "2025-10-03" } },
+  { "model": "tournament.match", "pk": 4, "fields": { "date": "2025-10-04" } },
+  { "model": "tournament.match", "pk": 5, "fields": { "date": "2025-10-05" } },
+  { "model": "tournament.match", "pk": 6, "fields": { "date": "2025-10-06" } },
+  { "model": "tournament.match", "pk": 7, "fields": { "date": "2025-10-07" } },
+  { "model": "tournament.match", "pk": 8, "fields": { "date": "2025-10-08" } },
+  { "model": "tournament.match", "pk": 9, "fields": { "date": "2025-10-09" } },
+  { "model": "tournament.match", "pk": 10, "fields": { "date": "2025-10-10" } },
+  { "model": "tournament.match", "pk": 11, "fields": { "date": "2025-10-11" } },
+  { "model": "tournament.match", "pk": 12, "fields": { "date": "2025-10-12" } },
+  { "model": "tournament.match", "pk": 13, "fields": { "date": "2025-10-13" } },
+  { "model": "tournament.match", "pk": 14, "fields": { "date": "2025-10-14" } },
+  { "model": "tournament.match", "pk": 15, "fields": { "date": "2025-10-15" } },
+  { "model": "tournament.match", "pk": 16, "fields": { "date": "2025-10-16" } },
+  { "model": "tournament.match", "pk": 17, "fields": { "date": "2025-10-17" } },
+  { "model": "tournament.match", "pk": 18, "fields": { "date": "2025-10-18" } },
+  { "model": "tournament.match", "pk": 19, "fields": { "date": "2025-10-19" } },
+  { "model": "tournament.match", "pk": 20, "fields": { "date": "2025-10-20" } },
+  { "model": "tournament.match", "pk": 21, "fields": { "date": "2025-10-21" } },
+  { "model": "tournament.match", "pk": 22, "fields": { "date": "2025-10-22" } },
+  { "model": "tournament.match", "pk": 23, "fields": { "date": "2025-10-23" } },
+  { "model": "tournament.match", "pk": 24, "fields": { "date": "2025-10-24" } },
+  { "model": "tournament.match", "pk": 25, "fields": { "date": "2025-10-25" } },
+  { "model": "tournament.match", "pk": 26, "fields": { "date": "2025-10-26" } },
+  { "model": "tournament.match", "pk": 27, "fields": { "date": "2025-10-27" } },
+  { "model": "tournament.match", "pk": 28, "fields": { "date": "2025-10-28" } },
+  { "model": "tournament.match", "pk": 29, "fields": { "date": "2025-10-29" } },
+  { "model": "tournament.match", "pk": 30, "fields": { "date": "2025-10-30" } },
+  { "model": "tournament.match", "pk": 31, "fields": { "date": "2025-10-01" } },
+  { "model": "tournament.match", "pk": 32, "fields": { "date": "2025-10-02" } },
+  { "model": "tournament.match", "pk": 33, "fields": { "date": "2025-10-03" } },
+  { "model": "tournament.match", "pk": 34, "fields": { "date": "2025-10-04" } },
+  { "model": "tournament.match", "pk": 35, "fields": { "date": "2025-10-05" } },
+  { "model": "tournament.match", "pk": 36, "fields": { "date": "2025-10-06" } },
+  { "model": "tournament.match", "pk": 37, "fields": { "date": "2025-10-07" } },
+  { "model": "tournament.match", "pk": 38, "fields": { "date": "2025-10-08" } },
+  { "model": "tournament.match", "pk": 39, "fields": { "date": "2025-10-09" } },
+  { "model": "tournament.match", "pk": 40, "fields": { "date": "2025-10-10" } },
+  {
+    "model": "tournament.teammatch",
+    "pk": 1,
+    "fields": {
+      "team": 8,
+      "match": 1,
+      "batting_score": 102,
+      "batting_wickets": 8,
+      "batting_overs": 20
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 2,
+    "fields": {
+      "team": 2,
+      "match": 1,
+      "batting_score": 139,
+      "batting_wickets": 1,
+      "batting_overs": 31
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 3,
+    "fields": {
+      "team": 5,
+      "match": 2,
+      "batting_score": 41,
+      "batting_wickets": 9,
+      "batting_overs": 35
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 4,
+    "fields": {
+      "team": 10,
+      "match": 2,
+      "batting_score": 123,
+      "batting_wickets": 9,
+      "batting_overs": 17
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 5,
+    "fields": {
+      "team": 9,
+      "match": 3,
+      "batting_score": 78,
+      "batting_wickets": 6,
+      "batting_overs": 24
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 6,
+    "fields": {
+      "team": 6,
+      "match": 3,
+      "batting_score": 127,
+      "batting_wickets": 4,
+      "batting_overs": 35
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 7,
+    "fields": {
+      "team": 5,
+      "match": 4,
+      "batting_score": 67,
+      "batting_wickets": 8,
+      "batting_overs": 44
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 8,
+    "fields": {
+      "team": 4,
+      "match": 4,
+      "batting_score": 132,
+      "batting_wickets": 5,
+      "batting_overs": 9
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 9,
+    "fields": {
+      "team": 9,
+      "match": 5,
+      "batting_score": 121,
+      "batting_wickets": 8,
+      "batting_overs": 19
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 10,
+    "fields": {
+      "team": 7,
+      "match": 5,
+      "batting_score": 200,
+      "batting_wickets": 1,
+      "batting_overs": 22
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 11,
+    "fields": {
+      "team": 5,
+      "match": 6,
+      "batting_score": 156,
+      "batting_wickets": 6,
+      "batting_overs": 9
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 12,
+    "fields": {
+      "team": 8,
+      "match": 6,
+      "batting_score": 129,
+      "batting_wickets": 10,
+      "batting_overs": 27
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 13,
+    "fields": {
+      "team": 8,
+      "match": 7,
+      "batting_score": 134,
+      "batting_wickets": 8,
+      "batting_overs": 25
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 14,
+    "fields": {
+      "team": 5,
+      "match": 7,
+      "batting_score": 80,
+      "batting_wickets": 6,
+      "batting_overs": 33
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 15,
+    "fields": {
+      "team": 3,
+      "match": 8,
+      "batting_score": 187,
+      "batting_wickets": 1,
+      "batting_overs": 39
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 16,
+    "fields": {
+      "team": 2,
+      "match": 8,
+      "batting_score": 119,
+      "batting_wickets": 7,
+      "batting_overs": 18
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 17,
+    "fields": {
+      "team": 3,
+      "match": 9,
+      "batting_score": 195,
+      "batting_wickets": 7,
+      "batting_overs": 47
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 18,
+    "fields": {
+      "team": 5,
+      "match": 9,
+      "batting_score": 52,
+      "batting_wickets": 7,
+      "batting_overs": 9
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 19,
+    "fields": {
+      "team": 10,
+      "match": 10,
+      "batting_score": 116,
+      "batting_wickets": 4,
+      "batting_overs": 30
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 20,
+    "fields": {
+      "team": 4,
+      "match": 10,
+      "batting_score": 185,
+      "batting_wickets": 0,
+      "batting_overs": 22
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 21,
+    "fields": {
+      "team": 8,
+      "match": 11,
+      "batting_score": 108,
+      "batting_wickets": 4,
+      "batting_overs": 45
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 22,
+    "fields": {
+      "team": 10,
+      "match": 11,
+      "batting_score": 198,
+      "batting_wickets": 8,
+      "batting_overs": 35
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 23,
+    "fields": {
+      "team": 5,
+      "match": 12,
+      "batting_score": 168,
+      "batting_wickets": 0,
+      "batting_overs": 31
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 24,
+    "fields": {
+      "team": 9,
+      "match": 12,
+      "batting_score": 181,
+      "batting_wickets": 7,
+      "batting_overs": 38
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 25,
+    "fields": {
+      "team": 7,
+      "match": 13,
+      "batting_score": 178,
+      "batting_wickets": 8,
+      "batting_overs": 24
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 26,
+    "fields": {
+      "team": 6,
+      "match": 13,
+      "batting_score": 79,
+      "batting_wickets": 10,
+      "batting_overs": 45
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 27,
+    "fields": {
+      "team": 3,
+      "match": 14,
+      "batting_score": 161,
+      "batting_wickets": 7,
+      "batting_overs": 16
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 28,
+    "fields": {
+      "team": 7,
+      "match": 14,
+      "batting_score": 50,
+      "batting_wickets": 0,
+      "batting_overs": 33
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 29,
+    "fields": {
+      "team": 6,
+      "match": 15,
+      "batting_score": 104,
+      "batting_wickets": 0,
+      "batting_overs": 22
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 30,
+    "fields": {
+      "team": 5,
+      "match": 15,
+      "batting_score": 72,
+      "batting_wickets": 2,
+      "batting_overs": 9
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 31,
+    "fields": {
+      "team": 9,
+      "match": 16,
+      "batting_score": 127,
+      "batting_wickets": 9,
+      "batting_overs": 18
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 32,
+    "fields": {
+      "team": 1,
+      "match": 16,
+      "batting_score": 161,
+      "batting_wickets": 2,
+      "batting_overs": 18
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 33,
+    "fields": {
+      "team": 2,
+      "match": 17,
+      "batting_score": 140,
+      "batting_wickets": 1,
+      "batting_overs": 24
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 34,
+    "fields": {
+      "team": 8,
+      "match": 17,
+      "batting_score": 82,
+      "batting_wickets": 10,
+      "batting_overs": 49
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 35,
+    "fields": {
+      "team": 4,
+      "match": 18,
+      "batting_score": 200,
+      "batting_wickets": 0,
+      "batting_overs": 39
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 36,
+    "fields": {
+      "team": 1,
+      "match": 18,
+      "batting_score": 188,
+      "batting_wickets": 7,
+      "batting_overs": 43
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 37,
+    "fields": {
+      "team": 2,
+      "match": 19,
+      "batting_score": 56,
+      "batting_wickets": 6,
+      "batting_overs": 31
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 38,
+    "fields": {
+      "team": 1,
+      "match": 19,
+      "batting_score": 99,
+      "batting_wickets": 3,
+      "batting_overs": 20
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 39,
+    "fields": {
+      "team": 9,
+      "match": 20,
+      "batting_score": 86,
+      "batting_wickets": 3,
+      "batting_overs": 48
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 40,
+    "fields": {
+      "team": 1,
+      "match": 20,
+      "batting_score": 60,
+      "batting_wickets": 3,
+      "batting_overs": 39
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 41,
+    "fields": {
+      "team": 6,
+      "match": 21,
+      "batting_score": 143,
+      "batting_wickets": 7,
+      "batting_overs": 18
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 42,
+    "fields": {
+      "team": 9,
+      "match": 21,
+      "batting_score": 128,
+      "batting_wickets": 1,
+      "batting_overs": 50
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 43,
+    "fields": {
+      "team": 2,
+      "match": 22,
+      "batting_score": 108,
+      "batting_wickets": 2,
+      "batting_overs": 30
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 44,
+    "fields": {
+      "team": 6,
+      "match": 22,
+      "batting_score": 103,
+      "batting_wickets": 6,
+      "batting_overs": 48
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 45,
+    "fields": {
+      "team": 4,
+      "match": 23,
+      "batting_score": 143,
+      "batting_wickets": 3,
+      "batting_overs": 40
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 46,
+    "fields": {
+      "team": 5,
+      "match": 23,
+      "batting_score": 135,
+      "batting_wickets": 10,
+      "batting_overs": 17
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 47,
+    "fields": {
+      "team": 2,
+      "match": 24,
+      "batting_score": 85,
+      "batting_wickets": 4,
+      "batting_overs": 19
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 48,
+    "fields": {
+      "team": 6,
+      "match": 24,
+      "batting_score": 195,
+      "batting_wickets": 4,
+      "batting_overs": 12
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 49,
+    "fields": {
+      "team": 8,
+      "match": 25,
+      "batting_score": 142,
+      "batting_wickets": 0,
+      "batting_overs": 50
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 50,
+    "fields": {
+      "team": 6,
+      "match": 25,
+      "batting_score": 164,
+      "batting_wickets": 3,
+      "batting_overs": 27
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 51,
+    "fields": {
+      "team": 5,
+      "match": 26,
+      "batting_score": 195,
+      "batting_wickets": 10,
+      "batting_overs": 35
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 52,
+    "fields": {
+      "team": 8,
+      "match": 26,
+      "batting_score": 83,
+      "batting_wickets": 5,
+      "batting_overs": 13
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 53,
+    "fields": {
+      "team": 5,
+      "match": 27,
+      "batting_score": 197,
+      "batting_wickets": 8,
+      "batting_overs": 7
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 54,
+    "fields": {
+      "team": 6,
+      "match": 27,
+      "batting_score": 183,
+      "batting_wickets": 10,
+      "batting_overs": 11
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 55,
+    "fields": {
+      "team": 9,
+      "match": 28,
+      "batting_score": 161,
+      "batting_wickets": 3,
+      "batting_overs": 42
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 56,
+    "fields": {
+      "team": 4,
+      "match": 28,
+      "batting_score": 92,
+      "batting_wickets": 5,
+      "batting_overs": 50
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 57,
+    "fields": {
+      "team": 3,
+      "match": 29,
+      "batting_score": 184,
+      "batting_wickets": 5,
+      "batting_overs": 21
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 58,
+    "fields": {
+      "team": 5,
+      "match": 29,
+      "batting_score": 159,
+      "batting_wickets": 9,
+      "batting_overs": 15
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 59,
+    "fields": {
+      "team": 3,
+      "match": 30,
+      "batting_score": 96,
+      "batting_wickets": 9,
+      "batting_overs": 30
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 60,
+    "fields": {
+      "team": 6,
+      "match": 30,
+      "batting_score": 154,
+      "batting_wickets": 4,
+      "batting_overs": 24
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 61,
+    "fields": {
+      "team": 9,
+      "match": 31,
+      "batting_score": 179,
+      "batting_wickets": 10,
+      "batting_overs": 38
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 62,
+    "fields": {
+      "team": 8,
+      "match": 31,
+      "batting_score": 89,
+      "batting_wickets": 9,
+      "batting_overs": 24
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 63,
+    "fields": {
+      "team": 9,
+      "match": 32,
+      "batting_score": 134,
+      "batting_wickets": 3,
+      "batting_overs": 45
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 64,
+    "fields": {
+      "team": 6,
+      "match": 32,
+      "batting_score": 96,
+      "batting_wickets": 5,
+      "batting_overs": 45
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 65,
+    "fields": {
+      "team": 2,
+      "match": 33,
+      "batting_score": 162,
+      "batting_wickets": 1,
+      "batting_overs": 44
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 66,
+    "fields": {
+      "team": 8,
+      "match": 33,
+      "batting_score": 129,
+      "batting_wickets": 5,
+      "batting_overs": 30
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 67,
+    "fields": {
+      "team": 5,
+      "match": 34,
+      "batting_score": 85,
+      "batting_wickets": 3,
+      "batting_overs": 45
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 68,
+    "fields": {
+      "team": 1,
+      "match": 34,
+      "batting_score": 129,
+      "batting_wickets": 6,
+      "batting_overs": 33
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 69,
+    "fields": {
+      "team": 10,
+      "match": 35,
+      "batting_score": 59,
+      "batting_wickets": 4,
+      "batting_overs": 29
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 70,
+    "fields": {
+      "team": 2,
+      "match": 35,
+      "batting_score": 52,
+      "batting_wickets": 3,
+      "batting_overs": 31
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 71,
+    "fields": {
+      "team": 4,
+      "match": 36,
+      "batting_score": 78,
+      "batting_wickets": 4,
+      "batting_overs": 41
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 72,
+    "fields": {
+      "team": 3,
+      "match": 36,
+      "batting_score": 183,
+      "batting_wickets": 10,
+      "batting_overs": 8
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 73,
+    "fields": {
+      "team": 6,
+      "match": 37,
+      "batting_score": 128,
+      "batting_wickets": 5,
+      "batting_overs": 9
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 74,
+    "fields": {
+      "team": 5,
+      "match": 37,
+      "batting_score": 103,
+      "batting_wickets": 6,
+      "batting_overs": 21
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 75,
+    "fields": {
+      "team": 7,
+      "match": 38,
+      "batting_score": 48,
+      "batting_wickets": 10,
+      "batting_overs": 8
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 76,
+    "fields": {
+      "team": 9,
+      "match": 38,
+      "batting_score": 181,
+      "batting_wickets": 4,
+      "batting_overs": 33
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 77,
+    "fields": {
+      "team": 10,
+      "match": 39,
+      "batting_score": 70,
+      "batting_wickets": 0,
+      "batting_overs": 22
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 78,
+    "fields": {
+      "team": 9,
+      "match": 39,
+      "batting_score": 84,
+      "batting_wickets": 1,
+      "batting_overs": 34
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 79,
+    "fields": {
+      "team": 1,
+      "match": 40,
+      "batting_score": 139,
+      "batting_wickets": 2,
+      "batting_overs": 45
+    }
+  },
+  {
+    "model": "tournament.teammatch",
+    "pk": 80,
+    "fields": {
+      "team": 3,
+      "match": 40,
+      "batting_score": 46,
+      "batting_wickets": 10,
+      "batting_overs": 48
+    }
+  }
+]

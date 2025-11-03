@@ -1,24 +1,31 @@
-{% extends "./base.html" %} {% block content %} {% for team in summary %}
-<div class="w-full items-start justify-start p-2 bg-white/10">
-  <div class="flex items-center justify-start">
-    <label for="{team.team.country}">Country:</label>
-    {{team.team.country}}
+{% extends "./base.html" %} {% block content %}
+
+<div
+  class="flex flex-wrap gap-4 w-full h-full items-start justify-start overflow-y-auto p-2"
+>
+  {% for team in summary %}
+  <div class="bg-white/10 flex flex-col gap-2 items-start justify-start py-2 px-4">
+    <div class="flex items-center justify-start">
+      <label for="{team.team.country}">Country:</label>
+      {{team.team.country}}
+    </div>
+    <div class="flex items-center justify-start">
+      <label for="{team.team.country}">Match:</label>
+      {{team.match.date}}
+    </div>
+    <div class="flex items-center justify-start">
+      <label for="{team.team.country}">Score:</label>
+      {{team.batting_score}}
+    </div>
+    <div class="flex items-center justify-start">
+      <label for="{team.team.country}">Overs:</label>
+      {{team.batting_overs}}
+    </div>
+    <div class="flex items-center justify-start">
+      <label for="{team.team.country}">Wickets:</label>
+      {{team.batting_wickets}}
+    </div>
   </div>
-  <div class="flex items-center justify-start">
-    <label for="{team.team.country}">Match:</label>
-    {{team.match}}
-  </div>
-  <div class="flex items-center justify-start">
-    <label for="{team.team.country}">Score:</label>
-    {{team.batting_score}}
-  </div>
-  <div class="flex items-center justify-start">
-    <label for="{team.team.country}">Overs:</label>
-    {{team.batting_overs}}
-  </div>
-  <div class="flex items-center justify-start">
-    <label for="{team.team.country}">Wickets:</label>
-    {{team.batting_wickets}} {% endfor %}
-  </div>
+  {% endfor %}
 </div>
 {% endblock content %}
