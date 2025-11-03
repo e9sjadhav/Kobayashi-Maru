@@ -4,6 +4,17 @@ from django.db import models
 class Team(models.Model):
     country = models.CharField(max_length=3, unique=True)
 
+    def matches_played(self)->int:
+        return self.team_matches.count()
+    
+    
+    def matches_won(self)->int:
+        return self.team_matches.filter(won=True).count()
+    
+    def matches_lost(self)->int:
+        return self.team_matches.filter(lost=True).count()
+    
+
 
 class Match(models.Model):
     date = models.DateField()
