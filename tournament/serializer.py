@@ -5,4 +5,3 @@ class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
         fields = ["country","matches","won","lost","points"]
-    
