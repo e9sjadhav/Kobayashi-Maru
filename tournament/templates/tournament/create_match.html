@@ -6,8 +6,8 @@
     <title>Document</title>
   </head>
   <body>
-    {% for match in matchdetails %}
-    <label for="{{match.name}}">{{match.label}}</label>
-    {{match}} {% endfor %}
+    {% for field in forms %}
+    <label for="{{field.name}}">{{field.label}}</label>
+    {{field}} {% endfor %}
   </body>
 </html>

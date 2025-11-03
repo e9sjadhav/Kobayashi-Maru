@@ -7,6 +7,7 @@ from .views import HomeView, ApplyView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('teams/', include("tournament.urls")),
 ]
 
 # Sitemap

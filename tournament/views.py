@@ -13,7 +13,7 @@ class MatchSummary(ListView):
 class MatchDetail(DetailView):
     model = Team
     template_name = "tournament/MatchDetail.html"
-    context_object_name = "matchdetails" 
+    context_object_name = "matchdetails"   
 
 class MatchCreate(CreateView):
     model = TeamMatch
