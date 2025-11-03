@@ -14,10 +14,16 @@ class Team(models.Model):
     def matches_lost(self)->int:
         return self.team_matches.filter(lost=True).count()
     
+    def __str__(self):
+        return f"country:{self.country}"
+    
 
 
 class Match(models.Model):
     date = models.DateField()
+
+    def __str__(self):
+        return f"country:{self.date}"
 
 class TeamMatch(models.Model):
     team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='team_matches')
