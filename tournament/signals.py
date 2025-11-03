@@ -1,9 +1,11 @@
-from django.db.models.signals import post_save
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
 from django.dispatch import receiver
+
 from .models import Team, TeamMatch
 
-@receiver(post_save,sender=TeamMatch)
+
+@receiver(post_save, sender=TeamMatch)
 def update_team_data():
     print("*******signal****")
     team = isinstance.team
@@ -15,4 +17,4 @@ def update_team_data():
     team.won = won
     team.lost = lost
 
-    team.save(update_fields=["played","won","lost"])
+    team.save(update_fields=["played", "won", "lost"])

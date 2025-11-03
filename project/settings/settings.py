@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     #my apps
     'tournament',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -166,3 +167,14 @@ SERVER_EMAIL = 'no-reply@pythonjobs.in'
 EMAIL_PORT = 587
 
 EMAIL_PROVIDER = 'aws'
+
+SWAGGER_SETTINGS = {
+    "SECURITY_DEFINITIONS": {
+        "Bearer": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header",
+            "description": "Enter your JWT token in the format: Bearer <token>",
+        }
+    }
+}

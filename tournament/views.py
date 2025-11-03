@@ -1,55 +1,79 @@
-from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView
-from .models import TeamMatch, Team
-from .forms import TeamMatchForm
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
-from .serializer import TeamSerializer
+from rest_framework.response import Response
+from rest_framework import status 
 
-# Create your views here.
-# class MatchSummary(ListView):
-#     model = TeamMatch
-#     template_name = "tournament/team_list.html"
-#     context_object_name = "summary"
-
-# class MatchDetail(DetailView):
-#     model = Team
-#     template_name = "tournament/team_view.html"
-#     context_object_name = "matchdetails"
-
-#     def get(self,request,*args, **kwargs):
-#         team_name = self.request.GET.get('team_name')
-#         return get_object_or_404(Team,country=team_name)
-
-
-# class MatchCreate(CreateView):
-#     model = TeamMatch
-#     form_class = TeamMatchForm
-#     template_name = "tournament/team_view.html"
+from .models import Match, Team, TeamMatch
+from .serializer import TeamSerializer,MatchSerializer
+from drf_yasg.utils import swagger_auto_schema
 
 
 class TeamListView(ListAPIView):
+    queryset = Team.objects.all()
     serializer_class = TeamSerializer
 
-    def get_queryset(self):
-        return Team.objects.all()
-    
-    def post(self,request):
+    @swagger_auto_schema(request_body=TeamSerializer)
+    def post(self, request):
         serializer = TeamSerializer(data=request.data)
-        return serializer.data
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
 
-class MatchDetailsApi(APIView):
+
+class TeamMatchDetailsApi(APIView):
     serializer_class = TeamSerializer
 
     def get(self, request, team_name):
-        team_name = self.request.GET.get('team_name')
-        serializer = TeamSerializer(team_name)
-        return serializer.data
 
-class MatchListView(ListAPIView):
+        print("team_name",team_name)
+        try:
+            team_name = Team.objects.get(country=team_name)
+            print("team_name",team_name)
+            serializer = TeamSerializer(team_name)
+            return Response(serializer.data,status=status.HTTP_200_OK)
+        except:
+            return Response({"error": "Item not found"},status=status.HTTP_404_NOT_FOUND)
+    
+
+class TeamMatchListView(ListAPIView):
     serializer_class = TeamSerializer
 
+    @swagger_auto_schema(request_body=TeamSerializer)
     def get_queryset(self):
-        return Team.objects.values('matches')
-    
+        try:
+            team_name = self.request.query_params.get('team_name')
+            team = Team.objects.get(country=team_name)
+            queryset = TeamMatch.objects.filter(team=team)
+            serializer = TeamSerializer(queryset)
+            return Response(serializer.data,status=status.HTTP_200_OK)
+        except:
+            return Response({"error": "matches not found"},status=status.HTTP_404_NOT_FOUND)
+        
+# match api views
+
+class MatchListView(ListAPIView):
+    queryset = TeamMatch.objects.all()
+    serializer_class = MatchSerializer
+
+    @swagger_auto_schema(request_body=MatchSerializer)
+    def post(self,request):
+        serializer = MatchSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
+
+class MatchDetailsView(APIView):
+
+    def get(self,request,match_id):
+        try:
+            match_id = TeamMatch.objects.get(id=match_id)
+            print(match_id)
+            serializer = MatchSerializer(match_id)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except:
+            return Response({"error": "Item not found"},status=status.HTTP_404_NOT_FOUND)

@@ -1,5 +1,6 @@
-from django.urls import path, include
-from .views import TeamListView, MatchDetailsApi,MatchListView
+from django.urls import include, path
+
+from .views import TeamMatchDetailsApi, TeamMatchListView, TeamListView,MatchListView,MatchDetailsView
 
 # urlpatterns = [
 #     path('', MatchSummary.as_view(), name='match-list'),
@@ -7,7 +8,9 @@ from .views import TeamListView, MatchDetailsApi,MatchListView
 # ]
 
 urlpatterns = [
-    path('', TeamListView.as_view(), name='match-list'),
-    path('<str:team_name>/', MatchDetailsApi.as_view(), name='match-details'),
-    path('matches/', MatchListView.as_view(), name='matches'),
+    path("teams/", TeamListView.as_view(), name="match-list"),
+    path("teams/<str:team_name>/", TeamMatchDetailsApi.as_view(), name="match-details"),
+    path("teams/matches/", TeamMatchListView.as_view(), name="team-matches"),
+    path("matches/", MatchListView.as_view(), name="matches"),
+    path("matches/<int:match_id>/", MatchDetailsView.as_view(), name="matches"),
 ]
