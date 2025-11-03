@@ -3,31 +3,64 @@
 <div
   class="flex flex-wrap gap-4 w-full h-full items-start justify-start overflow-y-auto p-2"
 >
-  {% for team in summary %}
-  <div class="bg-white/10 flex flex-col gap-2 items-start justify-start py-2 px-4">
-    <div class="flex items-center justify-start">
-      <label for="{team.team.country}">Country:</label>
-      <a href="{% url "match-deatil" team.team.country %}">
-        {{team.team.country}}
-      </a>
+  
+
+
+  <div class="overflow-x-auto rounded">
+        <table class="min-w-full bg-white/10 border border-gray-200">
+            <thead>
+                <tr>
+                    <th class="py-3 px-4 border-b font-semibold text-left">
+                        Team
+                    </th>
+                    <th class="py-3 px-4 border-b font-semibold text-left">
+                        Matches
+                    </th>
+                    <th class="py-3 px-4 border-b font-semibold text-left">
+                        Won
+                    </th>
+                    <th class="py-3 px-4 border-b font-semibold text-left">
+                        Lost
+                    </th>
+                    <th class="py-3 px-4 border-b font-semibold text-left">
+                       Points
+                    </th>
+                 
+                </tr>
+            </thead>
+            <tbody>
+                {% for team in summary %}
+                <tr class="hover:bg-white/5">
+                    <td class="py-3 px-4 border-b hover:underline"><a href="{% url "match-deatil" team.team.country %}">{{team.team.country}}</a></td>
+                    <td class="py-3 px-4 border-b">
+                        <span
+                            class="{% if task.status == 'todo' %}text-orange-500 {% elif task.status == 'in_progress' %}text-blue-600 {% elif task.status == 'done' %}text-green-700 {% endif %} font-medium"
+                        >
+                           {{team.team.matches}}
+                        </span>
+                    </td>
+                    <td class="py-3 px-4 border-b">
+                        {{team.team.won}}
+                    </td>
+                    <td class="py-3 px-4 border-b">
+                       {{team.team.lost}}
+                    </td>
+                    <td class="py-3 px-4 border-b">
+                       2
+                    </td>
+                    
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5" class="py-6 px-4 text-center text-gray-500">
+                        No Teams found. Create one!
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
-    <div class="flex items-center justify-start">
-      <label for="{team.team.country}">Match:</label>
-      {{team.match.date}}
-    </div>
-    <div class="flex items-center justify-start">
-      <label for="{team.team.country}">Score:</label>
-      {{team.batting_score}}
-    </div>
-    <div class="flex items-center justify-start">
-      <label for="{team.team.country}">Overs:</label>
-      {{team.batting_overs}}
-    </div>
-    <div class="flex items-center justify-start">
-      <label for="{team.team.country}">Wickets:</label>
-      {{team.batting_wickets}}
-    </div>
-  </div>
-  {% endfor %}
+
+ 
 </div>
 {% endblock content %}

@@ -15,9 +15,13 @@ class MatchDetail(DetailView):
     template_name = "tournament/team_view.html"
     context_object_name = "matchdetails"
 
-    def get_object(self):
-        team_name = self.kwargs.get('team_name')
+    def get(self,request,*args, **kwargs):
+        team_name = self.request.GET.get('team_name')
         return get_object_or_404(Team,country=team_name)
+    
+    # def get_object(self):
+    #     team_name = self.kwargs.get('team_name')
+    #     return get_object_or_404(Team,country=team_name)
 
 class MatchCreate(CreateView):
     model = TeamMatch

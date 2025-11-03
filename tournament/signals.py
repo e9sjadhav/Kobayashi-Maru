@@ -5,6 +5,7 @@ from .models import Team, TeamMatch
 
 @receiver(post_save,sender=TeamMatch)
 def update_team_data():
+    print("*******signal****")
     team = isinstance.team
     played = team.team_matches.count()
     won = team.team_matches.filter(won=True).count()

@@ -4,8 +4,8 @@ from django.db import models
 class Team(models.Model):
     country = models.CharField(max_length=3, unique=True)
     matches = models.IntegerField(default=0)
-    won = models.BooleanField(default=False)
-    lost = models.BooleanField(default=False)
+    won = models.IntegerField()
+    lost = models.IntegerField()
 
     # def matches_played(self)->int:
     #     return self.team_matches.count()
@@ -18,7 +18,7 @@ class Team(models.Model):
     #     return self.team_matches.filter(lost=True).count()
     
     def __str__(self):
-        return f"country:{self.country}"
+        return f"country:{self.country} | won:{self.won} | lost{self.lost}"
     
 
 
@@ -38,5 +38,6 @@ class TeamMatch(models.Model):
     won = models.BooleanField(default=False)
     lost = models.BooleanField(default=False)
 
+
     def __str__(self):
-        return f"team:{self.team.country} | score:{self.batting_score} | sickets:{self.batting_wickets} | overs:{self.batting_overs}"
+        return f"team:{self.team.country} | score:{self.batting_score} | wickets:{self.batting_wickets} | overs:{self.batting_overs} | won:{self.won} | lost{self.lost}"
