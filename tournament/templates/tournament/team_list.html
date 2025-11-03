@@ -7,7 +7,9 @@
   <div class="bg-white/10 flex flex-col gap-2 items-start justify-start py-2 px-4">
     <div class="flex items-center justify-start">
       <label for="{team.team.country}">Country:</label>
-      {{team.team.country}}
+      <a href="{% url "match-deatil" team.team.country %}">
+        {{team.team.country}}
+      </a>
     </div>
     <div class="flex items-center justify-start">
       <label for="{team.team.country}">Match:</label>

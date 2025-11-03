@@ -1,13 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    {% for match in matchdetails %}
-    <label for="{{match.name}}">{{match.label}}</label>
-    {{match}} {% endfor %}
-  </body>
-</html>
+{% extends "./base.html" %} {% block content %}
+
+<div
+  class="flex flex-wrap gap-4 w-full h-full items-start justify-start overflow-y-auto p-2"
+>
+  <div
+    class="bg-white/10 flex flex-col gap-2 items-start justify-start py-2 px-4"
+  >
+    <div class="flex items-center justify-start">
+      <label for="{matchdetails.team.country}">Country:</label>
+
+      {{matchdetails.team.country}}
+    </div>
+    <div class="flex items-center justify-start">
+      <label for="{matchdetails.team.country}">Match:</label>
+      {{matchdetails.match.date}}
+    </div>
+    <div class="flex items-center justify-start">
+      <label for="{matchdetails.team.country}">Score:</label>
+      {{matchdetails.batting_score}}
+    </div>
+    <div class="flex items-center justify-start">
+      <label for="{matchdetails.team.country}">Overs:</label>
+      {{matchdetails.batting_overs}}
+    </div>
+    <div class="flex items-center justify-start">
+      <label for="{matchdetails.team.country}">Wickets:</label>
+      {{matchdetails.batting_wickets}}
+    </div>
+  </div>
+</div>
+{% endblock content %}
