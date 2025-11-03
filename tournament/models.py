@@ -17,8 +17,8 @@ class Team(models.Model):
     # def matches_lost(self)->int:
     #     return self.team_matches.filter(lost=True).count()
     
-    # def __str__(self):
-    #     return f"country:{self.country}"
+    def __str__(self):
+        return f"country:{self.country}"
     
 
 
@@ -34,3 +34,9 @@ class TeamMatch(models.Model):
     batting_score = models.IntegerField()
     batting_wickets = models.IntegerField()
     batting_overs = models.IntegerField()
+    matches = models.IntegerField(default=0)
+    won = models.BooleanField(default=False)
+    lost = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"team:{self.team.country} | score:{self.batting_score} | sickets:{self.batting_wickets} | overs:{self.batting_overs}"
