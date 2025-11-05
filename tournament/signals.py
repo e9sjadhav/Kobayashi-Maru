@@ -6,15 +6,16 @@ from .models import Team, TeamMatch
 
 
 @receiver(post_save, sender=TeamMatch)
-def update_team_data():
+def update_team_data(sender, instance, created, **kwargs):
     print("*******signal****")
-    team = isinstance.team
-    played = team.team_matches.count()
+    team = instance.team
+    matches = team.team_matches.count()
     won = team.team_matches.filter(won=True).count()
     lost = team.team_matches.filter(lost=True).count()
+    points = won *2
 
-    team.matches = played
+    team.matches = matches
     team.won = won
     team.lost = lost
-
-    team.save(update_fields=["played", "won", "lost"])
+    team.points = points
+    team.save(update_fields=["matches", "won", "lost","points"])

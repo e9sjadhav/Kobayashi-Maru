@@ -1,18 +1,17 @@
 ## Table of Contents
 
-  * [Getting Started](#getting-started)
-  * [The Basics](#the-basics)
-  * [Models](#models)
-  * [Forms](#forms)
-  * [Views](#views)
-  * [Templates](#templates)
-  * [URLs](#urls)
-  * [Signals](#signals)
-  * [Admin](#admin)
-  * [Serializers](#serializers)
-  * [REST API](#rest-api)
-  * [ContentTypes](#contenttypes)
-
+- [Getting Started](#getting-started)
+- [The Basics](#the-basics)
+- [Models](#models)
+- [Forms](#forms)
+- [Views](#views)
+- [Templates](#templates)
+- [URLs](#urls)
+- [Signals](#signals)
+- [Admin](#admin)
+- [Serializers](#serializers)
+- [REST API](#rest-api)
+- [ContentTypes](#contenttypes)
 
 ## Getting Started
 
@@ -31,26 +30,25 @@
   ```
   git commit -m "Task n: <description>"
   ```
-  
-   
+
 ### 2. Virtual environment
 
 - Create a virtual environment using python3.8
 - Activate it
 - Use this virtual environment for subsequent tasks
-   
+
 ### 3. `pip`
 
 - Find the requirements file
 - Install all the requirements from requirements.txt
-- Document any errors you face in pip_errors.txt 
+- Document any errors you face in pip_errors.txt
 
 ### 4. Create a new folder in the root of the project.
 
 - Name the folder 'test_data'
 - All the output files should be stored in this folder.
 
-### 5. Run the django provided development server and test that the site is running. 
+### 5. Run the django provided development server and test that the site is running.
 
 - Take a screenshot of the site
 - [Bonus] The screenshot should be sized exactly 1440x900 pixels
@@ -68,22 +66,21 @@
 
 ### 7. Create Model: `Team`
 
-``` python
+```python
 class Team(models.Model):
     country = models.CharField(max_length=3, unique=True)
-``` 
-
+```
 
 ### 8. Create Model: `Match`
-     
-``` python
+
+```python
 class Match(models.Model):
     date = models.DateField()
 ```
-     
+
 ### 9. Create Model: `TeamMatch`
 
-``` python
+```python
 class TeamMatch(models.Model):
     team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='team_matches')
     match = models.ForeignKey(Match, on_delete=models.CASCADE, related_name='team_matches')
@@ -91,6 +88,7 @@ class TeamMatch(models.Model):
     batting_wickets = models.IntegerField()
     batting_overs = models.IntegerField()
 ```
+
 ### 10. Migrations
 
 - Create migrations
@@ -107,13 +105,11 @@ class TeamMatch(models.Model):
 - Return type: `int`
 - Return value: total number of matches played by the team
 
-
 ### 13. Create a method on the `Team` model that returns the total number of matches won by the team
 
 - Name of the method: `matches_won`
 - Return type: `int`
 - Return value: total number of matches won by the team
-
 
 ### 14. Create a method on the `Team` model that returns the total number of matches lost by the team
 
@@ -121,14 +117,12 @@ class TeamMatch(models.Model):
 - Return type: `int`
 - Return value: total number of matches lost by the team
 
-
 ### 15. Create random data for the above models
 
 - Create 10 teams
 - Create 40 matches where each match is unique
 - Make sure that the team matches are associated with the teams and matches created above
 - Make sure that the team matches have random scores, wickets and overs
-
 
 ### 16. Fixtures
 
@@ -193,18 +187,17 @@ class TeamMatch(models.Model):
 
 - Create a html template called `team_list.html`
 
-| Team | M | W | L | Pts |
-|------|--:|--:|--:|----:|
-| ABC  | 4 | 4 | 0 |   8 |
-| DEF  | 4 | 2 | 2 |   6 |
-| HIJ  | 4 | 1 | 3 |   2 |
-| KLM  | 4 | 1 | 3 |   2 |
-
+| Team |   M |   W |   L | Pts |
+| ---- | --: | --: | --: | --: |
+| ABC  |   4 |   4 |   0 |   8 |
+| DEF  |   4 |   2 |   2 |   6 |
+| HIJ  |   4 |   1 |   3 |   2 |
+| KLM  |   4 |   1 |   3 |   2 |
 
 ### 22. Each team name should be a link to the detail page created in 20
 
 - Create a html template called `team_view.html`
-- Render the output of 18 in this template 
+- Render the output of 18 in this template
 
 ## URLs
 
@@ -265,7 +258,6 @@ class TeamMatch(models.Model):
 - Won
 - Lost
 - Points
-    
 
 ## REST API
 
