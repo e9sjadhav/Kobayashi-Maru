@@ -8,34 +8,31 @@
       <thead>
         <tr>
           <th class="py-3 px-4 border-b font-semibold text-left">Team</th>
-          <th class="py-3 px-4 border-b font-semibold text-left">Matches</th>
+          <th class="py-3 px-4 border-b font-semibold text-left">Score</th>
+          <th class="py-3 px-4 border-b font-semibold text-left">Wickets</th>
+          <th class="py-3 px-4 border-b font-semibold text-left">Overs</th>
           <th class="py-3 px-4 border-b font-semibold text-left">Won</th>
           <th class="py-3 px-4 border-b font-semibold text-left">Lost</th>
-          <th class="py-3 px-4 border-b font-semibold text-left">Points</th>
         </tr>
       </thead>
       <tbody>
-        
-        {% for team in summary %}
+       
+        {% for match in matches %}
+ 
         <tr class="hover:bg-white/5">
           <td class="py-3 px-4 border-b hover:underline">
-            <a href="{% url "match-details" team.id %}">{{team.country}}</a>
+            <a href="{% url "match-details" match.id %}">{{match.team.country}}</a>
           </td>
-          <td class="py-3 px-4 border-b">
-            <span
-              class="font-medium"
-            >
-              {{team.matches}}
-            </span>
-          </td>
-          <td class="py-3 px-4 border-b">{{team.won}}</td>
-          <td class="py-3 px-4 border-b">{{team.lost}}</td>
-          <td class="py-3 px-4 border-b">{{team.points}}</td>
+          <td class="py-3 px-4 border-b">{{match.batting_score}}</td>
+          <td class="py-3 px-4 border-b">{{match.batting_wickets}}</td>
+          <td class="py-3 px-4 border-b">{{match.batting_overs}}</td>
+          <td class="py-3 px-4 border-b">{{match.won}}</td>
+          <td class="py-3 px-4 border-b">{{match.lost}}</td>
         </tr>
         {% empty %}
         <tr>
           <td colspan="5" class="py-6 px-4 text-center text-gray-500">
-            No Teams found. Create one!
+            No Matches Found. Create one!
           </td>
         </tr>
         {% endfor %}

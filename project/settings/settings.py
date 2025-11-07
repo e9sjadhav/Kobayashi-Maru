@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'tournament',
     'rest_framework',
     'drf_yasg',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

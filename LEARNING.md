@@ -49,3 +49,13 @@ python manage.py dumpdata tournament > fixtures/tournament.json
 ```
 log = GenericRelation(AuditLog)
 ```
+
+##
+
+```
+def get_queryset(self):
+        term = self.kwargs["term"]
+        if term:
+            return self.model.objects.filter(body__icontains=term)
+        return self.model.objects.none()
+```

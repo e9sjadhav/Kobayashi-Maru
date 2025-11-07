@@ -7,27 +7,26 @@
     class="bg-white/10 flex flex-col gap-2 items-start justify-start py-2 px-4"
   >
     <div class="flex items-center justify-start">
-      <label for="{matchdetails.team.country}">Country:</label>
+      <label for="{object.country}">Country:</label>
 
-      {{matchdetails.team.country}}
+      {{object.country}}
     </div>
     <div class="flex items-center justify-start">
-      <label for="{matchdetails.team.country}">Match:</label>
-      {{matchdetails.match.won}}
+      <label for="{object.country}">Matches:</label>
+      {{object.matches}}
+    </div>  
+    <div class="flex items-center justify-start">
+      <label for="{object.country}">Won:</label>
+      {{object.won}}
     </div>
     <div class="flex items-center justify-start">
-      <label for="{matchdetails.team.country}">Score:</label>
-      {{matchdetails.batting_score}}
+      <label for="{object.country}">Lost:</label>
+      {{object.lost}}
     </div>
     <div class="flex items-center justify-start">
-      <label for="{matchdetails.team.country}">Overs:</label>
-      {{matchdetails.batting_overs}}
-    </div>
-    <div class="flex items-center justify-start">
-      <label for="{matchdetails.team.country}">Wickets:</label>
-      {{matchdetails.batting_wickets}}
+      <label for="{object.country}">Points:</label>
+      {{object.points}}
     </div>
   </div>
 </div>
 {% endblock content %}
-

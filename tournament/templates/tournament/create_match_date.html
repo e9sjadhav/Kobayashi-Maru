@@ -1,11 +1,5 @@
 {% extends "./base.html" %} {% load widget_tweaks %} {% block content %}
 
-{% comment %} <div>
-  {% for match in object_list %}
-  {{match}}
-  {% endfor %}
-</div> {% endcomment %}
-
 <form
   class="flex flex-col gap-2 bg-white/10 p-4 items-start justify-center text-white"
   method="POST"
@@ -18,11 +12,15 @@
     class="block text-gray-100 font-semibold mb-1"
     >{{field.label}}</label
     >
-  {% if field.name == "team" or field.name == "match" %}
-  {{ field | add_class:"rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:ring-white border border-white/10 bg-black" }}
-  {% else %}
-  {{ field | add_class:"rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:ring-white border border-white/10" }}
-  {% endif %}
+ 
+    <input 
+    type="date"
+    name="{{ field.html_name }}"
+    id="{{ field.id_for_label }}" 
+    class="rounded w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-black border border-white/10"
+    value="{{ field.value|default_if_none:'' }}"
+    {% if field.field.required %}required{% endif %}
+/>
   {% endfor %}
 </div>
 
