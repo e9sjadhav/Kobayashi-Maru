@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     #my apps
     'tournament',
     'rest_framework',
-    'drf_yasg',
+    # 'drf_yasg',
     'widget_tweaks',
 ]
 
