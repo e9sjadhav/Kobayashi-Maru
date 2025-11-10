@@ -3,31 +3,31 @@ from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status 
-from django.views.generic import ListView,DetailView,CreateView,View, UpdateView
+from django.views.generic import ListView,DetailView,CreateView,View, UpdateView,FormView
 from .models import Match, Team, TeamMatch
 from .serializer import TeamSerializer,TeamMatchSerializer, MatchDateSerializer
 # from drf_yasg.utils import swagger_auto_schema
 # from drf_yasg import openapi
 from rest_framework import serializers
-from .forms import TeamMatchForm, MatchForm
+from .forms import TeamMatchForm, MatchForm,TeamForm
 from django.urls import reverse_lazy
 
-class TeamListView(ListView):
+class TeamListView(FormView):
     model = Team
     template_name = "tournament/team_list.html"
-    context_object_name = "summary"
+    form_class = TeamForm
+    success_url = reverse_lazy("teams")
 
-    queryset = Team.objects.all()
-    serializer_class = TeamSerializer
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['summary'] = Team.objects.all()
+        return context
 
-    def post(self, request):
-        serializer = TeamSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data,status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
-
+    def form_valid(self, form):
+        match = form.save(commit=False)
+        match.owner = self.request.user
+        match.save()
+        return super().form_valid(form)
 
 class TeamMatchDetailsApi(DetailView):
 
@@ -64,45 +64,27 @@ class NewMatchView(CreateView):
     template_name = "tournament/create_match_date.html"
     success_url = reverse_lazy("create-match")
     
-    # def post(self,request):
-    #     serializer = MatchDateSerializer(data=request.data)
-    #     if serializer.is_valid():
-    #         serializer.save()
-    #         return Response(serializer.data,status=status.HTTP_201_CREATED)
-    #     else:
-    #         return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
 
-class MatchListView(CreateView):
-    # model = Match
-    # template_name = "tournament/team_view.html"
+class MatchListView(FormView):
 
     model = TeamMatch
     form_class = TeamMatchForm
     template_name = "tournament/create_match.html"
     success_url = reverse_lazy("matches")
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['matches'] = TeamMatch.objects.all()
+        return context
+
     def form_valid(self, form):
-        form.instance.owner = self.request.user
+        match = form.save(commit=False)
+        match.owner = self.request.user
+        match.save()
         return super().form_valid(form)
 
-    # def get_queryset(self):
-    #     matches =  super().get_queryset()
-    #     return matches
-    
-    # queryset = TeamMatch.objects.all()
-    # serializer_class = TeamMatchSerializer
-    
-    # def post(self,request):
-    #     serializer = TeamMatchSerializer(data=request.data)
-    #     if serializer.is_valid():
-    #         serializer.save()
-    #         return Response(serializer.data,status=status.HTTP_201_CREATED)
-    #     else:
-    #         return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
 
 class MatchUpdateView(UpdateView):
-    # model = Match
-    # template_name = "tournament/team_view.html"
 
     model = TeamMatch
     form_class = TeamMatchForm

@@ -1,12 +1,8 @@
 {% extends "./base.html" %} {% load widget_tweaks %} {% block content %}
 
-{% comment %} <div>
-  {% for match in object_list %}
-  {{match}}
-  {% endfor %}
-</div> {% endcomment %}
+<div class="w-full h-full">
 
-<form
+  <form
   class="flex flex-col gap-2 bg-white/10 p-4 items-start justify-center text-white"
   method="POST"
 >
@@ -25,7 +21,45 @@
   {% endif %}
   {% endfor %}
 </div>
-
   <button type="submit" class="px-3 py-1 rounded-md bg-white text-black">Submit</button>
 </form>
+
+ <div class="overflow-x-auto h-full rounded mt-4">
+    <table class="min-w-full h-full bg-white/10 border border-gray-200">
+      <thead>
+        <tr>
+          <th class="py-3 px-4 border-b font-semibold text-left">Team</th>
+          <th class="py-3 px-4 border-b font-semibold text-left">Score</th>
+          <th class="py-3 px-4 border-b font-semibold text-left">Wickets</th>
+          <th class="py-3 px-4 border-b font-semibold text-left">Overs</th>
+          <th class="py-3 px-4 border-b font-semibold text-left">Won</th>
+          <th class="py-3 px-4 border-b font-semibold text-left">Lost</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+        {% for match in matches %}
+ 
+        <tr class="hover:bg-white/5">
+          <td class="py-3 px-4 border-b hover:underline">
+            <a href="{% url "match-details" match.id %}">{{match.team.country}}</a>
+          </td>
+          <td class="py-3 px-4 border-b">{{match.batting_score}}</td>
+          <td class="py-3 px-4 border-b">{{match.batting_wickets}}</td>
+          <td class="py-3 px-4 border-b">{{match.batting_overs}}</td>
+          <td class="py-3 px-4 border-b">{{match.won}}</td>
+          <td class="py-3 px-4 border-b">{{match.lost}}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5" class="py-6 px-4 text-center text-gray-500">
+            No Matches Found. Create one!
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  </div>
+
 {% endblock %}

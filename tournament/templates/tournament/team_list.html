@@ -1,8 +1,26 @@
-{% extends "./base.html" %} {% block content %}
+{% extends "./base.html" %} {% load widget_tweaks %} {% block content %}
 
 <div
   class="flex flex-wrap gap-4 w-full h-full items-start justify-start overflow-y-auto p-2"
 >
+  <form
+  class="flex flex-col gap-2 bg-white/10 p-4 items-start justify-center text-white"
+  method="POST"
+>
+{% csrf_token %}
+<div class="w-full">
+  {% for field in form %}
+  <label
+    for="{{ field.id_for_label }}"
+    class="block text-gray-100 font-semibold mb-1"
+    >{{field.label}}</label
+    >
+  {{ field | add_class:"rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:ring-white border border-white/10" }}
+  {% endfor %}
+</div>
+  <button type="submit" class="px-3 py-1 rounded-md bg-white text-black">Submit</button>
+</form>
+
   <div class="overflow-x-auto rounded">
     <table class="min-w-full bg-white/10 border border-gray-200">
       <thead>
